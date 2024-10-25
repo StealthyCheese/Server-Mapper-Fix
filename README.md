@@ -12,6 +12,7 @@ as seen in the ida snip the memory address for LoadLibraryA = TargetBase + 0x1E0
 
 To start fixing this we would need to get the imports called
 you can get the imports used within a process by following an import call (ill look something like this)
+
  ![IAT](/WriteUp/imgs/IAT.png)
 
 if your able, set breakpoints to get the list of imports
@@ -28,9 +29,11 @@ Kernel32 BaseAddress 00007FFD3FE91000 - 1000 = 00007FFD3FE90000
 Import Offset 00007FFD3FEA92C0 - 00007FFD3FE90000 = 0x192C0
 
 kernel32 base address + 0x192C0 = LoadLibrary import address
+
  ![LoadLibraryA](/WriteUp/imgs/LoadLibraryA.png)
  
-same for messageboxa
+Same For MessageBoxA
+
 MessageBoxA Export Address = 00007FFD3E1FA3B0
 
 User32 Base Address 00007FFD3E181000 - 1000 = 00007FFD3E180000
