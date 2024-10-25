@@ -22,15 +22,21 @@ for example with kernel32.dll you can get the exported function address (LoadLib
 
 ( THE IMPORT OFFSETS WILL CHANGE BETWEEN WINVERS!! I RECOMMEND USING GetProcAddress TO GET ADDRESSES AUTO AT RUNTIME )
 LoadLibrary Export Address = 00007FFD3FEA92C0
+
 Kernel32 BaseAddress 00007FFD3FE91000 - 1000 = 00007FFD3FE90000
+
 Import Offset 00007FFD3FEA92C0 - 00007FFD3FE90000 = 0x192C0
+
 kernel32 base address + 0x192C0 = LoadLibrary import address
  ![LoadLibraryA](/WriteUp/imgs/LoadLibraryA.png)
  
 same for messageboxa
 MessageBoxA Export Address = 00007FFD3E1FA3B0
+
 User32 Base Address 00007FFD3E181000 - 1000 = 00007FFD3E180000
+
 Import Offset 00007FFD3E1FA3B0 - 00007FFD3E180000 = 0x7A3B0
+
 User32 Base address + 0x7A3B0 = MessageBoxA import address
  ![MessageBoxA](/WriteUp/imgs/MessageBoxA.png)
 
