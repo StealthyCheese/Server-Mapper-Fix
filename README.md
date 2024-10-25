@@ -22,6 +22,7 @@ to get the import addresses you can manually debug the module containing the imp
 for example with kernel32.dll you can get the exported function address (LoadLibraryA) minus it from the module base address
 
 ( THE IMPORT OFFSETS WILL CHANGE BETWEEN WINVERS!! I RECOMMEND USING GetProcAddress TO GET ADDRESSES AUTO AT RUNTIME )
+
 LoadLibrary Export Address = 00007FFD3FEA92C0
 
 Kernel32 BaseAddress 00007FFD3FE91000 - 1000 = 00007FFD3FE90000
