@@ -5,6 +5,7 @@ the target module has no extra protections besides iat + PE server mapped
 
 Below is what this example looks like under IDA
  ![IDA](/WriteUp/imgs/IDA.png)
+
 As you can see the entry refrences function addresses which are out of module.
 as seen in the ida snip the memory address for LoadLibraryA = TargetBase + 0x1E000
 & address for MessageBoxA = TargetBase + 0x1ED7A
@@ -12,6 +13,7 @@ as seen in the ida snip the memory address for LoadLibraryA = TargetBase + 0x1E0
 To start fixing this we would need to get the imports called
 you can get the imports used within a process by following an import call (ill look something like this)
  ![IAT](/WriteUp/imgs/IAT.png)
+
 if your able, set breakpoints to get the list of imports
 you can use the return addresses to get the address the import if refrenced example = ret - intr size;
 
