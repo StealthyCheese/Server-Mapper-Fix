@@ -16,7 +16,7 @@ you can get the imports used within a process by following an import call (ill l
  ![IAT](/WriteUp/imgs/IAT.png)
 
 if your able, set breakpoints to get the list of imports
-you can use the return addresses to get the address the import if refrenced example = ret - intr size;
+you can use the return addresses to get the address the import if refrenced example = ret - instr size;
 
 to get the import addresses you can manually debug the module containing the import needed
 for example with kernel32.dll you can get the exported function address (LoadLibraryA) minus it from the module base address
